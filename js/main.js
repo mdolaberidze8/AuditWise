@@ -81,9 +81,7 @@ counters.forEach((counter) => observer.observe(counter));
 const popup = document.getElementById("phone-popup");
 const popupClose = document.getElementById("popup-close");
 
-const triggerBtns = document.querySelectorAll(
-  ".btn-cta, .btn-outline, .btn-cta-dark",
-);
+const triggerBtns = document.querySelectorAll(".btn-cta, .btn-cta-dark");
 triggerBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
