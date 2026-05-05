@@ -5,6 +5,19 @@ const navMenu = document.querySelector("nav ul");
 burger.addEventListener("click", () => {
   navMenu.classList.toggle("nav-open");
   burger.classList.toggle("burger-open");
+  // body scroll lock
+  document.body.style.overflow = navMenu.classList.contains("nav-open")
+    ? "hidden"
+    : "";
+});
+
+// nav link-ზე დაჭერისას მენიუ დაიხუროს
+navMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("nav-open");
+    burger.classList.remove("burger-open");
+    document.body.style.overflow = "";
+  });
 });
 
 // ===== COUNTER ANIMATION =====

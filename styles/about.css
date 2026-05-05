@@ -307,7 +307,23 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .about-hero h1 {
-    font-size: 36px;
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .about-hero {
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .about-hero-watermark {
+    display: none;
+  }
+
+  .about-hero-line {
+    width: 100%;
+    max-width: 200px;
   }
 
   .story-grid {
@@ -349,5 +365,50 @@
 
   .accreditation-item {
     border-bottom: 0.5px solid var(--ink);
+  }
+
+  /* story section */
+  .about-story {
+    padding: 48px 0;
+  }
+
+  .story-image-wrap {
+    height: 280px;
+  }
+
+  .story-image-border {
+    display: none;
+  }
+
+  .story-card {
+    padding: 32px 24px;
+  }
+
+  /* values */
+  .about-values {
+    padding: 64px 0;
+  }
+
+  .value-card {
+    padding: 32px 24px;
+  }
+
+  /* value-card coral pill — ამოვიღოთ border-radius მობილურზე */
+  .value-card--coral {
+    border-radius: 16px;
+  }
+
+  /* why us */
+  .about-why {
+    padding: 64px 0;
+  }
+
+  .why-number {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .why-item {
+    padding: 32px 24px;
   }
 }

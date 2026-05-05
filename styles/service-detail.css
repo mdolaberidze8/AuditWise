@@ -293,9 +293,50 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  /* Hero — sticky nav fix */
+  .sd-hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
+
+  .sd-hero h1 {
+    font-size: clamp(28px, 7vw, 40px);
+    margin-bottom: 16px;
+  }
+
+  .sd-hero p {
+    font-size: 14px;
+  }
+
+  .sd-hero-num {
+    top: calc(var(--nav-height) + 12px);
+    right: 24px;
+  }
+
+  .sd-back {
+    margin-bottom: 20px;
+  }
+
+  /* Methods */
+  .sd-methods {
+    padding: 48px 0;
+  }
+
   .sd-methods-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+  }
+
+  .sd-method-item {
+    padding: 24px 0;
+    gap: 16px;
+  }
+
+  /* Includes */
+  .sd-includes {
+    padding: 48px 0;
   }
 
   .sd-includes-grid {
@@ -305,14 +346,26 @@
   .sd-include-item {
     border-right: none;
     border-bottom: 0.5px solid var(--ink);
+    padding: 28px 24px;
   }
 
   .sd-include-item:last-child {
     border-bottom: none;
   }
 
+  /* CTA */
+  .sd-cta {
+    padding: 64px 0;
+  }
+
   .sd-cta-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .sd-cta-primary,
+  .sd-cta-secondary {
+    text-align: center;
+    width: 100%;
   }
 }

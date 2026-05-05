@@ -462,20 +462,66 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  /* Hero */
+  .services-hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 48px) 0 60px;
+  }
+
+  .services-hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 20px;
+  }
+
+  .services-hero p {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .services-hero-bg,
+  .services-hero-bg-right {
+    font-size: 200px;
+    opacity: 0.02;
+  }
+
+  .btn-services-cta {
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+  }
+
+  /* Services grid */
+  .services-grid-section {
+    padding: 48px 0;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
 
   .service-item {
     border-right: none;
+    padding: 32px 24px;
   }
 
+  .service-item h3 {
+    font-size: 22px;
+  }
+
+  /* Process */
   .process-steps {
     grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
 
   .process-step {
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 16px 24px 0;
+  }
+
+  /* Stats */
+  .services-stats {
+    padding: 48px 0;
   }
 
   .stats-row {
@@ -485,9 +531,33 @@
   .stat-col {
     border-right: none;
     border-bottom: 0.5px solid var(--ink);
+    padding: 40px 24px;
   }
 
   .stat-col:last-child {
     border-bottom: none;
+  }
+
+  .stat-big {
+    font-size: 56px;
+  }
+
+  /* FAQ */
+  .services-faq {
+    padding: 48px 0;
+  }
+
+  .faq-question {
+    padding: 20px 20px;
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px;
+  }
+
+  /* CTA */
+  .services-cta {
+    padding: 64px 0;
   }
 }
