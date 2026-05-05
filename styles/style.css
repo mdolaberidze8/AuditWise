@@ -17,8 +17,6 @@
 body {
   font-family: var(--font-sans);
   background-color: var(--parchment);
-  background-image: radial-gradient(var(--ink) 0.5px, transparent 0.5px);
-  background-size: 40px 40px;
   background-attachment: fixed;
   color: var(--ink);
 }
