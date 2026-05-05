@@ -1,0 +1,83 @@
+// ===== BURGER MENU =====
+const burger = document.getElementById("burger");
+const navMenu = document.querySelector("nav ul");
+
+burger.addEventListener("click", () => {
+  navMenu.classList.toggle("nav-open");
+  burger.classList.toggle("burger-open");
+});
+
+// ===== COUNTER ANIMATION =====
+const counters = document.querySelectorAll(".stat-number, .stat-big");
+
+const animateCounter = (el) => {
+  const target = el.innerText;
+  const suffix = target.replace(/[0-9]/g, "");
+  const num = parseInt(target);
+  let current = 0;
+  const step = Math.ceil(num / 60);
+
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= num) {
+      current = num;
+      clearInterval(timer);
+    }
+    el.innerText = current + suffix;
+  }, 30);
+};
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+counters.forEach((counter) => observer.observe(counter));
+
+// ===== POPUP =====
+const popup = document.getElementById("phone-popup");
+const popupClose = document.getElementById("popup-close");
+
+const triggerBtns = document.querySelectorAll(
+  ".btn-cta, .btn-outline, .btn-cta-dark",
+);
+triggerBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup.style.display = "flex";
+  });
+});
+
+popupClose.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    popup.style.display = "none";
+  }
+});
+
+// ===== FAQ =====
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    const isActive = item.classList.contains("active");
+    faqItems.forEach((i) => i.classList.remove("active"));
+    if (!isActive) item.classList.add("active");
+  });
+});
