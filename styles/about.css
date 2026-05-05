@@ -348,10 +348,20 @@
     grid-template-columns: 1fr;
   }
 
+  /* მობილური რიგი: სურათი → ტექსტი → ლურჯი card */
   .story-image-wrap {
     grid-column: 1;
+    grid-row: 1;
+    height: 280px;
+  }
+
+  .story-image-border {
+    display: none;
+  }
+
+  .story-text {
+    grid-column: 1;
     grid-row: 2;
-    height: 400px;
   }
 
   .story-card {

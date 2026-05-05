@@ -162,8 +162,8 @@ nav ul a:hover::after {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.12em;
-    padding: 14px 20px;
-    text-align: left;
+    padding: 18px 20px;
+    text-align: center;
   }
 
   nav ul a::after {
