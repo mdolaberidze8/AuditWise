@@ -358,7 +358,6 @@
 
     <footer class="footer">
       <div class="footer-grid">
-        <!-- სვეტი 1 — ლოგო -->
         <div class="footer-brand">
           <span class="footer-logo">AW</span>
           <p>
@@ -366,25 +365,38 @@
           </p>
         </div>
 
-        <!-- სვეტი 2 — სისტემა -->
-        <div class="footer-col">
+        <div class="footer-col footer-col--accordion">
           <h4>სერვისები</h4>
-          <a href="./real-estate.html">უძრავი ქონების შეფასება</a>
-          <a href="./movable.html">მოძრავი ქონების შეფასება</a>
-          <a href="./business.html">ბიზნესის შეფასება</a>
-          <a href="./services.html">ზიანის შეფასება</a>
+          <button class="footer-col-trigger" aria-expanded="false">
+            <span class="footer-col-trigger-label">სერვისები</span>
+            <span class="material-symbols-outlined footer-col-arrow"
+              >expand_more</span
+            >
+          </button>
+          <div class="footer-col-links">
+            <a href="./real-estate.html">უძრავი ქონების შეფასება</a>
+            <a href="./movable.html">მოძრავი ქონების შეფასება</a>
+            <a href="./business.html">ბიზნესის შეფასება</a>
+            <a href="./damage.html">ზიანის შეფასება</a>
+          </div>
         </div>
 
-        <!-- სვეტი 3 — კომპანია -->
-        <div class="footer-col">
+        <div class="footer-col footer-col--accordion">
           <h4>კომპანია</h4>
-          <a href="./about.html">ჩვენს შესახებ</a>
-          <a href="index.html#clients">კლიენტები</a>
-          <a href="./contact.html">კონტაქტი</a>
+          <button class="footer-col-trigger" aria-expanded="false">
+            <span class="footer-col-trigger-label">კომპანია</span>
+            <span class="material-symbols-outlined footer-col-arrow"
+              >expand_more</span
+            >
+          </button>
+          <div class="footer-col-links">
+            <a href="./about.html">ჩვენს შესახებ</a>
+            <a href="./index.html#clients">კლიენტები</a>
+            <a href="./contact.html">კონტაქტი</a>
+          </div>
         </div>
 
-        <!-- სვეტი 4 — კონტაქტი -->
-        <div class="footer-col">
+        <div class="footer-col footer-col--contact">
           <h4>კონტაქტი</h4>
           <div class="footer-contact">
             <div class="footer-contact-item">
@@ -403,6 +415,7 @@
         </div>
       </div>
     </footer>
+
     <!-- POPUP -->
     <div class="phone-popup" id="phone-popup">
       <div class="popup-inner">

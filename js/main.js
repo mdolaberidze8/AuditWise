@@ -1,3 +1,26 @@
+// ===== FOOTER ACCORDION (mobile) =====
+document
+  .querySelectorAll(".footer-col--accordion .footer-col-trigger")
+  .forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const col = btn.closest(".footer-col--accordion");
+      const isOpen = col.classList.contains("open");
+      // სხვა accordion-ები დახურე
+      document.querySelectorAll(".footer-col--accordion").forEach((c) => {
+        c.classList.remove("open");
+        c.querySelector(".footer-col-trigger").setAttribute(
+          "aria-expanded",
+          "false",
+        );
+      });
+      // ამჟამინდელი გახსენი (თუ დახურული იყო)
+      if (!isOpen) {
+        col.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
 // ===== BURGER MENU =====
 const burger = document.getElementById("burger");
 const navMenu = document.querySelector("nav ul");
@@ -88,9 +111,12 @@ document.addEventListener("keydown", (e) => {
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
-  item.querySelector(".faq-question").addEventListener("click", () => {
-    const isActive = item.classList.contains("active");
-    faqItems.forEach((i) => i.classList.remove("active"));
-    if (!isActive) item.classList.add("active");
-  });
+  const q = item.querySelector(".faq-question");
+  if (q) {
+    q.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+      faqItems.forEach((i) => i.classList.remove("active"));
+      if (!isActive) item.classList.add("active");
+    });
+  }
 });
